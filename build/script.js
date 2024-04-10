@@ -74,6 +74,8 @@ const VMain = {
                 <p>
                     <span style="font-weight: bold;">Back side:</span>
                     <span>Write a question that uses this equation or identity.</span>
+                </p>
+                <p>
                     <span style="font-weight: bold;">Back side:</span>
                     <span>Or write something that triggers your memory.</span>
                 </p>
