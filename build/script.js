@@ -18,8 +18,14 @@ const VFlashcard = {
 const VMain = {
     data() {
         return {
+            card1: [
+                true,
+            ],
+            card2: [
+                true,
+            ],
             flashcards: {
-                color: 'yellow',
+                color: 'green',
                 front: {
                     label: 'a ddefinition',
                     value: '\\cos(x + 2π) = \\cos(x)',
@@ -41,8 +47,10 @@ const VMain = {
             <div class="answer">
                 <p>When I know the answer, I can usually do it immediately.</p>
                 <p>But for hard ones where I don't know what to do, I feel stuck.</p>
-                <p style="font-weight: bold;">My brain feels blank.</p>
-                <p style="color: red;">And it feels super frustrating.</p>
+                <div class="center container" style="margin-bottom: 20px;">
+                    <p style="font-weight: bold;">My brain feels blank.</p>
+                    <p style="color: red;">And it feels super frustrating.</p>
+                </div>
             </div>
             
             <div class="question">Do you have an idea of where you want to see your end product?</div>
@@ -50,26 +58,42 @@ const VMain = {
             <div class="answer">
                 <p>You mean ... like solving backwards?</p>
                 <p>Starting with the end, and working towards it?</p>
-                <p>Some people definitely this.</p>
+                <p>Some people definitely do this.</p>
                 <p>Personally, I usually just try different things, and see if anything "clicks".</p>
             </div>
             
-            <div class="linebreak"></div>
-            <p style="font-weight: bold;">My recommendation is flash cards.</p>
-            <p>Every time you come across a hard question on your homework, turn it into a flashcard.</p>
-            <p>Collect an army of difficult questions.</p>
-            <p style="font-weight: bold;">Here are some example flashcards:</p>
+            <div class="sandwich" style="width: 50% center;">Have you ever tried using flashcards for studying? Every time you come across a hard question on your homework, turn it into a flashcard. After awhile, you will have an army of difficult questions in your flashcards.</div>
+            <p style="font-weight: bold; margin-top: 50pt; margin-bottom: 30pt; display: flex; align-items: center; justify-content: center;">Here is how you might create your cards</p>
             
             <div class="container" style="margin-bottom: 20px;">
-                <v-flashcard :value="flashcard" v-for="flashcards"/>
+                <p style="font-weight: bold; margin-bottom: 15pt; color: #3b82f6;">Card Type 1: Definitions && Memorizations</p>
+                <p>
+                    <span style="font-weight: bold;">Front side:</span>
+                    <span>The equation and its name.</span>
+                </p>
+                <p>
+                    <span style="font-weight: bold;">Back side:</span>
+                    <span>Write a question that uses this equation or identity.</span>
+                    <span style="font-weight: bold;">Back side:</span>
+                    <span>Or write something that triggers your memory.</span>
+                </p>
+            </div>
+            
+            <div class="container" style="margin-top: 50pt; margin-bottom: 20px;">
+                <p style="font-weight: bold; margin-bottom: 15pt; color: #3b82f6;">Card Type 2: Hard Questions</p>
+                <p>
+                    <span style="font-weight: bold;">Front side:</span>
+                    <span>The question</span>
+                </p>
+                <p>
+                    <span style="font-weight: bold;">Back side:</span>
+                    <span>Steps to get to the answer</span>
+                </p>
             </div>
             
             
         </div>
     `,
-    props: [
-        'flashcard',
-    ],
 }
 
 VMain.el = '#app'
